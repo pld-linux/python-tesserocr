@@ -17,6 +17,7 @@ Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/t/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 # Source0-md5:	9fb6e8e6d1e1a7a5faa660b12d1b18fa
 URL:		https://github.com/sirfz/tesserocr
+BuildRequires:	python-Cython
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 BuildRequires:	tesseract-devel >= 3.04
