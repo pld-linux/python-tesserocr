@@ -1,7 +1,9 @@
 #
+# TODO
+# - tests fail: raise RuntimeError('Failed to initialize API')
+
 # Conditional build:
-%bcond_without	doc	# don't build doc
-%bcond_without	tests	# do not perform "make test"
+%bcond_with	tests	# do not perform "make test"
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
@@ -17,16 +19,19 @@ Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/t/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 # Source0-md5:	9fb6e8e6d1e1a7a5faa660b12d1b18fa
 URL:		https://github.com/sirfz/tesserocr
-BuildRequires:	python-Cython
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 BuildRequires:	tesseract-devel >= 3.04
 %if %{with python2}
+BuildRequires:	python-Cython
 BuildRequires:	python-devel
+BuildRequires:	python-pillow
 BuildRequires:	python-setuptools
 %endif
 %if %{with python3}
+BuildRequires:	python3-Cython
 BuildRequires:	python3-devel
+BuildRequires:	python3-pillow
 BuildRequires:	python3-setuptools
 %endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
