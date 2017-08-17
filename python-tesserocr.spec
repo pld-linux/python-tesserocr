@@ -12,12 +12,12 @@
 %define		pypi_name	tesserocr
 Summary:	A simple, Pillow-friendly, Python wrapper around tesseract-ocr API using Cython
 Name:		python-%{pypi_name}
-Version:	2.1.3
+Version:	2.2.2
 Release:	1
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/t/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
-# Source0-md5:	9fb6e8e6d1e1a7a5faa660b12d1b18fa
+# Source0-md5:	e6c9c8f6f6720e16cd612146e20e7feb
 URL:		https://github.com/sirfz/tesserocr
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
