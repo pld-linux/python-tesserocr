@@ -13,7 +13,7 @@
 Summary:	A simple, Pillow-friendly, Python wrapper around tesseract-ocr API using Cython
 Name:		python-%{pypi_name}
 Version:	2.2.2
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/t/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
