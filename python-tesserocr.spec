@@ -7,17 +7,18 @@
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
-%define 	module		tesserocr
-%define 	egg_name	tesserocr
+%define		module		tesserocr
+%define		egg_name	tesserocr
 %define		pypi_name	tesserocr
 Summary:	A simple, Pillow-friendly, Python wrapper around tesseract-ocr API using Cython
 Name:		python-%{pypi_name}
-Version:	2.2.2
-Release:	3
+Version:	2.3.1
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/t/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
-# Source0-md5:	e6c9c8f6f6720e16cd612146e20e7feb
+# Source0-md5:	99e2001affe861ae3a5aa2e9f233e2d7
+Patch0:		tesseract4.patch
 URL:		https://github.com/sirfz/tesserocr
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
@@ -60,6 +61,7 @@ image files instead.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
+%patch0 -p1
 
 # Remove bundled egg-info
 %{__rm} -r %{egg_name}.egg-info
