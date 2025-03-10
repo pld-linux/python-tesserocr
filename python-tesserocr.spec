@@ -12,7 +12,7 @@ Summary:	A simple, Pillow-friendly, Python wrapper around tesseract-ocr API usin
 Summary(pl.UTF-8):	Proste, zgodne z Pillow obudowanie API tesseract-ocr przy użyciu Cythona
 Name:		python-%{pypi_name}
 Version:	2.6.0
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/t/tesserocr/%{pypi_name}-%{version}.tar.gz
